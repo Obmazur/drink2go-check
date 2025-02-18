@@ -2,16 +2,76 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <title>Drink2Go</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="favicons/favicon.png">
     <script src="scripts/index.js" defer></script>
   </head>
+
   <body class="page__body">
-    <header class="header">Шапка</header>
+
+    <header class="header">
+      <nav class="main-nav main-nav--is-closed">
+          <div class="main-nav__wrapper logo">
+            <a class="logo__wrapper" href="">
+              <picture>
+                <source media="(min-width: 1140px)" srcset="">
+                <source media="(min-width: 768px)" srcset="">
+                <img class="logo__image" src="" width="32" height="36" alt="Магазин Drink2Go.">
+              </picture>
+              <span class="logo__title">Интернет-магазин кофейных напитков</span>
+            </a>
+          </div>
+          <ul class="main-nav__list main-nav__list--site">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--active" href="">
+                <span class="main-nav__text">Главная</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="">
+                <span class="main-nav__text">Каталог</span>
+              </a>
+            </li><li class="main-nav__item">
+              <a class="main-nav__link" href="">
+                <span class="main-nav__text">Доставка</span>
+              </a>
+            </li><li class="main-nav__item">
+              <a class="main-nav__link" href="">
+                <span class="main-nav__text">О нас</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__list main-nav__list--user">
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--login" href="">
+                <svg class="main-nav__icon" width="16" height="16"></svg>
+                <span class="main-nav__text">Войти</span>
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link main-nav__link--login" href="">
+                <svg class="main-nav__icon" width="16" height="16"></svg>
+                <span class="main-nav__text">Корзина</span>
+              </a>
+            </li>
+          </ul>
+          <button class="main-nav__toggle button" type="button">
+            <span class="visually-hidden">Открыть/закрыть меню сайта.</span>
+          </button>
+      </nav>
+    </header>
+
     <main>
       <h1>Страница для старта</h1>
     </main>
+
   </body>
 </html>
