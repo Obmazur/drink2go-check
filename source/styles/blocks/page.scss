@@ -1,0 +1,29 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+  font-family: $font;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 143%;
+  background-color: $base-white;
+  color: $base-black;
+
+  main {
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page__body {
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
