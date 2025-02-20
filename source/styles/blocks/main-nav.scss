@@ -1,0 +1,116 @@
+.main-nav {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 60px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 133%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-nav__wrapper {
+  padding: 12px;
+  margin: 0 auto 0 8px;
+}
+
+.main-nav__list {
+  @include list;
+}
+
+.main-nav__item {
+  @include active-header-button;
+}
+
+.main-nav__link {
+  @include link;
+  position: relative;
+  display: block;
+}
+
+.main-nav__list--site {
+  width: 100%;
+  min-width: 320px;
+  background-color: $base-white;
+}
+
+.main-nav__list--site .main-nav__item {
+  border-bottom: 1px solid $base-secondary;
+
+  &:first-child {
+    border-top: 1px solid $base-secondary;
+  }
+}
+
+.main-nav__list--site .main-nav__link {
+  width: 100%;
+  padding: 20px 60px;
+}
+
+.main-nav__list--user {
+  display: flex;
+}
+
+.main-nav__list--user .main-nav__text {
+  position: absolute;
+  opacity: 0;
+}
+
+.main-nav__link--login,
+.main-nav__link--cart {
+  padding: 22px;
+  width: 60px;
+  height: 60px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+}
+
+.main-nav__link--login {
+  background-image: url("../../icons/login.svg");
+}
+
+.main-nav__link--cart {
+  background-image: url("../../icons/cart.svg");
+}
+
+.main-nav__toggle {
+  @include active-header-button;
+  width: 60px;
+  height: 60px;
+}
+
+.main-nav--is-closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 22px;
+  height: 12px;
+  width: 16px;
+  background-image: url("../../icons/menu.svg");
+}
+
+.main-nav--is-open .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  height: 12px;
+  width: 12px;
+  background-image: url("../../icons/cross.svg");
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--is-closed .main-nav__list--site {
+    display: none;
+  }
+}
+
+.main-nav--is-open .main-nav__list--site {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  min-height: 229px;
+  z-index: 10;
+}

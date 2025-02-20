@@ -22,8 +22,8 @@
 //   }
 // }
 
-// @mixin active-opacity {
-//   &:active {
-//     opacity: 0.3;
-//   }
-// }
+@mixin active-header-button {
+  &:active {
+    background-color: $base-secondary;
+  }
+}
