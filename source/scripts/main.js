@@ -6,4 +6,6 @@ const toggleMenu = (button) => {
   button.classList.toggle('main-nav--is-open');
 };
 
-navToggleElement.addEventListener('click', toggleMenu(navMainElement));
+navToggleElement.addEventListener('click', () => {
+  toggleMenu(navMainElement);
+});
