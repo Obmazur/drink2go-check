@@ -30,3 +30,10 @@
     max-width: 768px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    max-width: 1440px;
+    text-align: start;
+  }
+}

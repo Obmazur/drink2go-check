@@ -12,3 +12,23 @@
     width: 82px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .logo__wrapper {
+    @include link;
+    display: flex;
+  }
+
+  .logo__image {
+    width: 170px;
+    margin-right: 20px;
+  }
+
+  .logo__title {
+    width: 126px;
+    display: block;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+}
