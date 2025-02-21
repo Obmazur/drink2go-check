@@ -1,5 +1,5 @@
 const navMainElement = document.querySelector('.main-nav');
-const navToggleElement = document.querySelector('.main-nav__toggle');
+const navToggleElement = document.querySelector('.js-toggle-button');
 
 const toggleMenu = (button) => {
   button.classList.toggle('main-nav--is-closed');

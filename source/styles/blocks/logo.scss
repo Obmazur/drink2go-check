@@ -6,3 +6,9 @@
 .logo__title {
   display: none;
 }
+
+@media (min-width: $tablet-width) {
+  .logo__image {
+    width: 82px;
+  }
+}

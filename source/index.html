@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font">
-    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Bold.ttf" as="font" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.ttf" as="font" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Regular.ttf" as="font" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.ttf" as="font" crossOrigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicons/favicon.png">
@@ -16,7 +15,7 @@
 
   <body class="page__body">
 
-    <header class="header">
+    <header class="header" data-test="header">
       <nav class="main-nav main-nav--is-closed">
           <div class="main-nav__wrapper logo">
             <a class="logo__wrapper" href="">
@@ -60,7 +59,7 @@
               </a>
             </li>
           </ul>
-          <button class="main-nav__toggle button" type="button">
+          <button class="main-nav__toggle button js-toggle-button" type="button">
             <span class="visually-hidden">Открыть/закрыть меню сайта.</span>
           </button>
       </nav>
