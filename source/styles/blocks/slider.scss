@@ -90,16 +90,9 @@
   display: none;
 }
 
-.slider__controls {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  top: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .slider__button {
+  position: absolute;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -122,5 +115,126 @@
 }
 
 .slider__button--next {
+  right: 0;
   transform: rotate(180deg);
+}
+
+@media (min-width: $tablet-width) {
+  .slider__slide {
+    padding: 60px 80px 0;
+  }
+
+  .slider__slide--first {
+    background: linear-gradient($flat-white 640px, $base-white 188px);
+  }
+
+  .slider__slide--second {
+    background: linear-gradient($lavender-latte 640px, $base-white 188px);
+  }
+
+  .slider__slide--third {
+    background: linear-gradient($espresso 640px, $base-white 188px);
+  }
+
+  .slider__slide picture {
+    order: 1;
+  }
+
+  .slider__slide--active {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider__image {
+    width: 476px;
+    height: 476px;
+    margin: 0 auto;
+  }
+
+  .slider__header {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+
+  .slider__order {
+    margin: 0 auto 20px;
+  }
+
+  .slider__price {
+    margin-right: 20px;
+  }
+
+  .slider__button {
+    width: 80px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider__slide {
+    padding: 30px 80px 84px;
+  }
+
+  .slider__slide--active {
+    display: grid;
+    gap: 0 30px;
+    grid-template-columns: 600px 1fr;
+    grid-template-rows: 166px auto auto 1fr;
+  }
+
+  .slider__slide--first {
+    background: none;
+    background-color: $flat-white;
+  }
+
+  .slider__slide--second {
+    background: none;
+    background-color: $lavender-latte;
+  }
+
+  .slider__slide--third {
+    background: none;
+    background-color: $espresso;
+  }
+
+  .slider__slide picture {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    order: 0;
+  }
+
+  .slider__image {
+    width: 600px;
+    height: 600px;
+  }
+
+  .slider__badge {
+    display: flex;
+    align-items: end;
+  }
+
+  .slider__header {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  .slider__description {
+    margin-bottom: 40px;
+  }
+
+  .slider__order {
+    margin: 0 auto 0 0;
+  }
+
+  .slider__buy {
+    height: min-content;
+  }
+
+  .slider__pagination {
+    display: flex;
+    position: absolute;
+    top: 630px;
+    left: 619px;
+  }
 }

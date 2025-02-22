@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 202px;
+  height: 24px;
+}
+
+.pagination__button {
+  display: flex;
+  width: 62px;
+  height: 4px;
+  background-color: $base-white;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-opacity;
+  }
+
+  &:active {
+    background-color: $base-primary;
+  }
+}
+
+.pagination__button--active {
+  background-color: $base-primary;
+}
