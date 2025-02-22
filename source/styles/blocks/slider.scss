@@ -1,0 +1,126 @@
+.slider {
+  position: relative;
+}
+
+.slider__slides {
+  @include list;
+}
+
+.slider__slide {
+  padding: 20px 20px 60px;
+  display: none;
+}
+
+.slider__slide--first {
+  background-color: $flat-white;
+}
+
+.slider__slide--second {
+  background-color: $lavender-latte;
+}
+
+.slider__slide--third {
+  background-color: $espresso;
+}
+
+.slider__slide--active {
+  display: block;
+}
+
+.slider__image {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 10px;
+}
+
+.slider__badge {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $base-primary;
+}
+
+.slider__header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+}
+
+.slider__description {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.slider__order {
+  display: flex;
+  margin: 0 25px;
+  line-height: 32px;
+}
+
+.slider__old-price {
+  margin: 4px 6px 4px 0;
+  font-size: 16px;
+  text-decoration: line-through;
+  color: $base-primary;
+}
+
+.slider__price {
+  margin: 4px auto 4px 0;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.slider__buy {
+  @include button-states;
+  border-radius: 4px;
+  padding: 8px 20px;
+  background-color: $base-primary;
+  color: $base-white;
+}
+
+.slider__pagination {
+  @include list;
+  display: none;
+}
+
+.slider__controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.slider__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  }
+
+  &:active {
+    background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+  }
+
+  &:disabled path {
+    fill: $base-grey;
+  }
+}
+
+.slider__button--next {
+  transform: rotate(180deg);
+}

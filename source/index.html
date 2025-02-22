@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preload" href="fonts/Montserrat-Bold.ttf" as="font" crossOrigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-ExtraBold.ttf" as="font" crossOrigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-Regular.ttf" as="font" crossOrigin="anonymous">
-    <link rel="preload" href="fonts/Montserrat-SemiBold.ttf" as="font" crossOrigin="anonymous">
+    <link rel="preload" href="fonts/Montserrat-Bold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-ExtraBold.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-Regular.woff2" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" href="favicons/favicon.png">
@@ -29,7 +29,7 @@
           </div>
           <ul class="main-nav__list main-nav__list--site">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--active" href="">
+              <a class="main-nav__link main-nav__link--active" href="#">
                 <span class="main-nav__text">Главная</span>
               </a>
             </li>
@@ -38,23 +38,23 @@
                 <span class="main-nav__text">Каталог</span>
               </a>
             </li><li class="main-nav__item">
-              <a class="main-nav__link" href="">
+              <a class="main-nav__link" href="#">
                 <span class="main-nav__text">Доставка</span>
               </a>
             </li><li class="main-nav__item">
-              <a class="main-nav__link" href="">
+              <a class="main-nav__link" href="#">
                 <span class="main-nav__text">О нас</span>
               </a>
             </li>
           </ul>
           <ul class="main-nav__list main-nav__list--user">
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--login" href="">
+              <a class="main-nav__link main-nav__link--login" href="#">
                 <span class="main-nav__text">Войти</span>
               </a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--cart" href="">
+              <a class="main-nav__link main-nav__link--cart" href="#">
                 <span class="main-nav__text">Корзина</span>
               </a>
             </li>
@@ -66,7 +66,97 @@
     </header>
 
     <main>
-      <h1>Страница для старта</h1>
+      <h1 class="visually-hidden">Интернет-магазин кофейных напитков Coffee2Go</h1>
+      <section class="slider" data-test="hero">
+        <ol class="slider__slides">
+          <li class="slider__slide slider__slide--first slider__slide--active">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="images/slide1-desktop@1x.webp 1x, images/slide1-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="images/slide1-tablet@1x.webp 1x, images/slide1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/slide1-mobile@1x.webp 1x, images/slide1-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="images/slide1-desktop@1x.png 1x, images/slide1-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="images/slide1-tablet@1x.png 1x, images/slide1-tablet@2x.png 2x">
+              <img class="slider__image" src="images/slide1-mobile@1x.png" width="280" height="280" srcset="images/slide1-mobile@2x.png 2x" alt="Фотография кофе Дэкаф Флэт Уайт.">
+            </picture>
+            <span class="slider__badge">Новинка!</span>
+            <h2 class="slider__header">Декаф Флэт Уайт</h2>
+            <p class="slider__description">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+            <div class="slider__order">
+              <span class="slider__old-price">295₽</span>
+              <span class="slider__price">225₽</span>
+              <a class="slider__buy button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="slider__slide slider__slide--second">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="images/slide2-desktop@1x.webp 1x, images/slide2-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="images/slide2-tablet@1x.webp 1x, images/slide2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/slide2-mobile@1x.webp 1x, images/slide2-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="images/slide2-desktop@1x.png 1x, images/slide2-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="images/slide2-tablet@1x.png 1x, images/slide2-tablet@2x.png 2x">
+              <img class="slider__image" src="images/slide2-mobile@1x.png" width="280" height="280" srcset="images/slide2-mobile@2x.png 2x" alt="Фотография кофе Дэкаф Флэт Уайт.">
+            </picture>
+            <span class="slider__badge">Новинка!</span>
+            <h2 class="slider__header">Лавандовый Латте</h2>
+            <p class="slider__description">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+            <div class="slider__order">
+              <span class="slider__old-price">285₽</span>
+              <span class="slider__price">265₽</span>
+              <a class="slider__buy button" href="#">Заказать</a>
+            </div>
+          </li>
+          <li class="slider__slide slider__slide--third">
+            <picture>
+              <source media="(min-width: 1440px)" type="image/webp" srcset="images/slide3-desktop@1x.webp 1x, images/slide3-desktop@2x.webp 2x">
+              <source media="(min-width: 768px)" type="image/webp" srcset="images/slide3-tablet@1x.webp 1x, images/slide3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="images/slide3-mobile@1x.webp 1x, images/slide3-mobile@2x.webp 2x">
+              <source media="(min-width: 1440px)" srcset="images/slide3-desktop@1x.png 1x, images/slide3-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="images/slide3-tablet@1x.png 1x, images/slide3-tablet@2x.png 2x">
+              <img class="slider__image" src="images/slide3-mobile@1x.png" width="280" height="280" srcset="images/slide3-mobile@2x.png 2x" alt="Фотография кофе Дэкаф Флэт Уайт.">
+            </picture>
+            <span class="slider__badge">Новинка!</span>
+            <h2 class="slider__header">Тройной Эспрессо</h2>
+            <p class="slider__description">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+            <div class="slider__order">
+              <span class="slider__old-price">395₽</span>
+              <span class="slider__price">375₽</span>
+              <a class="slider__buy button" href="#">Заказать</a>
+            </div>
+          </li>
+        </ol>
+        <ol class="slider__pagination pagination">
+          <li class="pagination__item">
+            <button class="pagination__button button" type="button">
+              <span class="visually-hidden">Первый товар</span>
+            </button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__button button" type="button">
+              <span class="visually-hidden">Второй товар</span>
+            </button>
+          </li>
+          <li class="pagination__item">
+            <button class="pagination__button button" type="button">
+              <span class="visually-hidden">Третий товар</span>
+            </button>
+          </li>
+        </ol>
+        <div class="slider__controls">
+          <button class="slider__button slider__button--prev button" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z" fill="#7859CF" />
+            </svg>
+            <span class="visually-hidden">Предыдущий товар</span>
+          </button>
+          <button class="slider__button slider__button--next button" type="button">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7166 0L15 1.32082L6.56677 10L15 18.6792L13.7166 20L4 10L13.7166 0Z" fill="#7859CF" />
+            </svg>
+            <span class="visually-hidden">Следующий товар</span>
+          </button>
+        </div>
+
+      </section>
     </main>
 
     <script src="scripts/main.js"></script>
