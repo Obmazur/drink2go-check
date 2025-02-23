@@ -54,6 +54,7 @@
 }
 
 .slider__description {
+  min-height: 100px;
   margin: 0;
   margin-bottom: 20px;
 }
@@ -109,7 +110,11 @@
     background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
   }
 
-  &:disabled path {
+  &[aria-disabled="true"] {
+    pointer-events: none;
+  }
+
+  &[aria-disabled="true"] path {
     fill: $base-grey;
   }
 }

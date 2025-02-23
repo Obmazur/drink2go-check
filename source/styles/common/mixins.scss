@@ -25,7 +25,9 @@
     background-color: $primary-darker;
   }
 
-  &:disabled {
+  &:disabled,
+  &[aria-disabled="true"] {
     background-color: $base-grey;
+    pointer-events: none;
   }
 }

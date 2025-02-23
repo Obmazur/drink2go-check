@@ -20,8 +20,13 @@
   &:active {
     background-color: $base-primary;
   }
+
+  &[aria-disabled="true"] {
+    pointer-events: none;
+  }
 }
 
 .pagination__button--active {
   background-color: $base-primary;
+  pointer-events: none;
 }

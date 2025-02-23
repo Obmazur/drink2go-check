@@ -1,11 +1,4 @@
-const navMainElement = document.querySelector('.main-nav');
-const navToggleElement = document.querySelector('.js-toggle-button');
+import { initToggle } from './nav';
+import './slider';
 
-const toggleMenu = (button) => {
-  button.classList.toggle('main-nav--is-closed');
-  button.classList.toggle('main-nav--is-open');
-};
-
-navToggleElement.addEventListener('click', () => {
-  toggleMenu(navMainElement);
-});
+initToggle();
